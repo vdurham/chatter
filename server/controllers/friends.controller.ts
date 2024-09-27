@@ -18,6 +18,6 @@ export default class FriendsController extends Controller {
   }
 
   public friendsPage(req: Request, res: Response) {
-    res.redirect('/pages/friends.html');
+    res.redirect('/friends.html');
   }
 }

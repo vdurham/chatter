@@ -18,7 +18,7 @@ export default class HomeController extends Controller {
   }
 
   public indexPage(req: Request, res: Response): void {
-    res.redirect('/pages/index.html');
+    res.redirect('/index.html');
   }
 
   public homePage(req: Request, res: Response): void {

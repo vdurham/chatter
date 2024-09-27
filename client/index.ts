@@ -1,7 +1,7 @@
 import axios, { AxiosResponse } from 'axios';
 
 function goToAuth() {
-  window.location.href = '../../pages/auth.html';
+  window.location.href = '../../auth.html';
   alert(
     'You you must be logged in to access this page. Redirecting to login page.'
   );
@@ -24,7 +24,7 @@ async function isLoggedIn(): Promise<boolean> {
       });
       if (res.status >= 200 && res.status < 300) {
         if (res.data.payload.credentials.username == CU) {
-          window.location.href = '../../pages/chat.html';
+          window.location.href = '../../chat.html';
         }
       } else {
         goToAuth();

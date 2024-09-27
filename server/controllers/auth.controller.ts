@@ -23,7 +23,7 @@ export default class AuthController extends Controller {
   }
 
   public async authPage(req: Request, res: Response) {
-    res.redirect('/pages/auth.html');
+    res.redirect('/auth.html');
   }
 
   public async register(req: Request, res: Response) {

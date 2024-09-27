@@ -33,7 +33,7 @@ export default class ChatController extends Controller {
   }
 
   public chatRoomPage(req: Request, res: Response) {
-    res.redirect('/pages/chat.html');
+    res.redirect('/chat.html');
   }
 
   public authorize(req: Request, res: Response, next: NextFunction) {

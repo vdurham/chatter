@@ -12,11 +12,11 @@
     },
     {
       "type": "navigate",
-      "url": "https://chatter-chat-app.onrender.com/pages/friends.html",
+      "url": "https://chatter-chat-app.onrender.com/friends.html",
       "assertedEvents": [
         {
           "type": "navigation",
-          "url": "https://chatter-chat-app.onrender.com/pages/friends.html",
+          "url": "https://chatter-chat-app.onrender.com/friends.html",
           "title": "Chatter Friend List"
         }
       ]

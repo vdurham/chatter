@@ -19,7 +19,7 @@ function onLogout(e: Event): void {
   localStorage.removeItem('token');
   localStorage.removeItem('currentUser');
   // Redirect the user to the Authentication page
-  window.location.href = '../../pages/auth.html';
+  window.location.href = '../../auth.html';
   alert('You have been logged out.');
 }
 
@@ -94,7 +94,7 @@ async function onLeave(): Promise<void> {
         localStorage.removeItem('token');
         localStorage.removeItem('currentUser');
         alert(res.data.message);
-        window.location.href = '../../pages/auth.html';
+        window.location.href = '../../auth.html';
       } else {
         alert(`Failed to leave chat. ${res.data.message}`);
       }
@@ -201,7 +201,7 @@ function pageSetup(): void {
 
 const loggedIn = await isLoggedIn();
 if (!loggedIn) {
-  window.location.href = '../../pages/auth.html';
+  window.location.href = '../../auth.html';
 } else {
   if (document.readyState === 'complete') {
     pageSetup();
