@@ -1,0 +1,95 @@
+{
+  "title": "InviteFriends.ReinvitesAFriend",
+  "steps": [
+    {
+      "type": "setViewport",
+      "width": 550,
+      "height": 824,
+      "deviceScaleFactor": 1,
+      "isMobile": false,
+      "hasTouch": false,
+      "isLandscape": false
+    },
+    {
+      "type": "waitForExpression",
+      "expression": "(() => { localStorage.setItem('friends', JSON.stringify([])); return true;})()"
+    },
+    {
+      "type": "navigate",
+      "url": "https://chatter-chat-app.onrender.com/pages/friends.html",
+      "assertedEvents": [
+        {
+          "type": "navigation",
+          "url": "https://chatter-chat-app.onrender.com/pages/friends.html",
+          "title": "Chatter Friend List"
+        }
+      ]
+    },
+    {
+      "type": "click",
+      "target": "main",
+      "selectors": [["#friendName"]],
+      "offsetY": 12.0999755859375,
+      "offsetX": 83
+    },
+    {
+      "type": "change",
+      "value": "test1",
+      "selectors": [["#friendName"]],
+      "target": "main"
+    },
+    {
+      "type": "click",
+      "target": "main",
+      "selectors": [["#friendEmail"]],
+      "offsetY": 18.0999755859375,
+      "offsetX": 48.79998779296875
+    },
+    {
+      "type": "change",
+      "value": "test1@gmail.com",
+      "selectors": [["#friendEmail"]],
+      "target": "main"
+    },
+    {
+      "type": "click",
+      "target": "main",
+      "selectors": [["#addFriendBtn"], ["text/Add Friend"]],
+      "offsetY": 16.89996337890625,
+      "offsetX": 54.48750305175781
+    },
+    {
+      "type": "click",
+      "target": "main",
+      "selectors": [["#emailCheckbox"]],
+      "offsetY": 2.25,
+      "offsetX": 4.399999618530273
+    },
+    {
+      "type": "waitForExpression",
+      "expression": "(() => { const emailCheckbox = document.getElementById('emailCheckbox'); return emailCheckbox.checked; })()"
+    },
+    {
+      "type": "click",
+      "target": "main",
+      "selectors": [["#emailCheckbox"]],
+      "offsetY": 3.25,
+      "offsetX": 6.399999618530273
+    },
+    {
+      "type": "waitForExpression",
+      "expression": "(() => { const emailCheckbox = document.getElementById('emailCheckbox'); return !emailCheckbox.checked; })()"
+    },
+    {
+      "type": "click",
+      "target": "main",
+      "selectors": [["#emailCheckbox"]],
+      "offsetY": 2.25,
+      "offsetX": 2.3999996185302734
+    },
+    {
+      "type": "waitForExpression",
+      "expression": "(() => { const emailCheckbox = document.getElementById('emailCheckbox'); return emailCheckbox.checked; })()"
+    }
+  ]
+}

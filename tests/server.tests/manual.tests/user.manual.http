@@ -1,0 +1,57 @@
+// valid and invalid tokens
+@authTokenInvalid = "faketoken"
+@authTokenValid = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImphbmVAbWUuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkeW1kNlBQMk9PcU9HTXgvMEJjejcyLm00aUdPWFBidmJxR3RsWDkzWERqam9VUkVtRkphUUsiLCJpYXQiOjE3MTMyMTg2MjZ9.qIwi3nEe657Idg01_oYl1LvCq7jL6WeaGNrOsWDlNvY
+// get one user
+GET http://localhost:8080/chat/users/thor@avengers.com
+Content-Type: application/json
+Authorization: Bearer {{authTokenValid}}
+
+###
+// get non-existent user
+GET http://localhost:8080/chat/users/nonexistentuser@gmail.com
+Content-Type: application/json
+Authorization: Bearer {{authTokenValid}}
+
+###
+// /chat/users
+GET http://localhost:8080/chat/users
+Content-Type: application/json
+Authorization: Bearer {{authTokenValid}}
+
+###
+// /chat/usernames
+GET http://localhost:8080/chat/usernames
+Content-Type: application/json
+Authorization: Bearer {{authTokenValid}}
+
+###
+// get non-existent user  -> invalid token
+GET http://localhost:8080/chat/users/nonexistentuser@gmail.com
+Content-Type: application/json
+Authorization: Bearer {{authTokenInvalid}}
+
+###
+// /chat/users  -> invalid token
+GET http://localhost:8080/chat/users
+Content-Type: application/json
+Authorization: Bearer 
+
+###
+// /chat/usernames  -> missing token
+GET http://localhost:8080/chat/usernames
+Content-Type: application/json
+
+###
+// delete user - expect success
+
+DELETE http://localhost:8080/chat/users/jane@me.com
+Content-Type: application/json
+Authorization: Bearer {{authTokenValid}}
+
+###
+// delete non-existent user - expect failure
+
+DELETE http://localhost:8080/chat/users/nonexistentuser@gmail.com
+Content-Type: application/json
+Authorization: Bearer {{authTokenValid}}
+

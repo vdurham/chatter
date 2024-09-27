@@ -1,0 +1,7 @@
+**/*.js
+**/*.mjs
+.dist
+.dist-server
+jest.config.ts
+trials/**/*.ts
+tests/trials.tests/**.ts

@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="FirstName LastName (andrewid)" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="18351 class project" />
+    <link href="../styles.css" rel="stylesheet" type="text/css" />
+    <script src="../friends.ts" type="module" defer=""></script>
+    <title>Chatter Friend List</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+    />
+    <style>
+      .friend-col {
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-content: space-around;
+        align-items: baseline;
+        border-radius: 15px;
+        padding: 10px;
+        margin: 20px;
+      }
+
+      .exit-button {
+        background-color: transparent;
+        color: #fff;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        font-size: 13px;
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .checkbox {
+        appearance: none;
+        width: 15px;
+        height: 15px;
+        border: 2px solid #4285f4;
+        border-radius: 7px;
+        outline: none;
+        margin-right: 1px;
+        cursor: pointer;
+        background-color: #4285f4;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .checkbox:checked {
+        background-color: #4285f4;
+        border: 2px solid #4285f4;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .checkbox:checked::before {
+        content: '\2713';
+        font-size: 14px;
+        color: #fff;
+        display: block;
+        text-align: center;
+      }
+
+      .email {
+        background-color: #1a73e8; /* Updated to a more vibrant blue */
+        border: none;
+        color: white;
+        padding: 0.4rem 1rem; /* Slightly increased padding for a more touch-friendly size */
+        text-align: center;
+        font-size: 1.1rem; /* Increased font size for readability */
+        cursor: pointer;
+        border-radius: 30px; /* More rounded corners */
+        font-weight: 500; /* Slightly lighter font weight */
+        text-decoration: none;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition:
+          background-color 0.3s ease,
+          transform 0.2s ease; /* Added transform for hover effect */
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="header_container">
+      <div class="header">
+        <a href="/">
+          <input class="button" type="button" id="homeBtn" value="Home" />
+        </a>
+        <span
+          style="
+            color: #1a73e8;
+            font-family: 'Lobster', cursive;
+            font-size: 2.5rem;
+            font-weight: bold;
+          "
+          >Chatter Friends</span
+        >
+        <input
+          class="button"
+          type="button"
+          id="clearBtn"
+          value="Clear Friends"
+          disabled
+        />
+      </div>
+    </div>
+
+    <div id="friendList" class="content">
+      <!-- friendElement syntax reference  -->
+      <!-- <div class="friend-col">
+        <div
+          class="form-row"
+          style="width: 100%; justify-content: space-between"
+        >
+          <div class="form-row" style="align-items: baseline; margin: 0.1rem">
+            <input class="checkbox" type="checkbox" />
+            <span class="text-box-label" style="font-size: 1.5rem"
+              >John Doe</span
+            >
+          </div>
+          <button class="exit-button">&#10006;</button>
+        </div>
+        <div class="form-row">
+          <div class="email" style="font-size: 0.8rem; text-align: left"
+            >john.doe@somewhere.com</div
+          >
+        </div>
+      </div> -->
+    </div>
+
+    <div class="footer">
+      <form id="newFriendForm">
+        <div class="form-row">
+          <span class="form-col">
+            <label class="text-box-label" for="friendName"
+              >Friend's Name:</label
+            >
+            <input
+              class="text-box"
+              type="text"
+              id="friendName"
+              placeholder="Friend's first and last name"
+            />
+          </span>
+          <span class="form-col">
+            <label class="text-box-label" for="friendEmail"
+              >Friend's Email:</label
+            >
+            <input
+              class="text-box"
+              type="email"
+              id="friendEmail"
+              placeholder="myfriend@somedomain.com"
+              required
+            />
+          </span>
+        </div>
+        <div class="form-row">
+          <input
+            class="button"
+            type="submit"
+            id="addFriendBtn"
+            value="Add Friend"
+          />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

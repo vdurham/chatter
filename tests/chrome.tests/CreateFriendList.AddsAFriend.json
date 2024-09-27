@@ -1,0 +1,65 @@
+{
+  "title": "CreateFriendList.AddsAFriend",
+  "steps": [
+    {
+      "type": "setViewport",
+      "width": 915,
+      "height": 825,
+      "deviceScaleFactor": 1,
+      "isMobile": false,
+      "hasTouch": false,
+      "isLandscape": false
+    },
+    {
+      "type": "waitForExpression",
+      "expression": "(() => { localStorage.setItem('friends', JSON.stringify([])); return true;})()"
+    },
+    {
+      "type": "navigate",
+      "url": "https://chatter-chat-app.onrender.com/pages/friends.html",
+      "assertedEvents": [
+        {
+          "type": "navigation",
+          "url": "https://chatter-chat-app.onrender.com/pages/friends.html",
+          "title": "Chatter Friend List"
+        }
+      ]
+    },
+    {
+      "type": "click",
+      "target": "main",
+      "selectors": [["#friendName"]],
+      "offsetY": 15.5,
+      "offsetX": 88.60000610351562
+    },
+    {
+      "type": "change",
+      "value": "S",
+      "selectors": [["#friendName"]],
+      "target": "main"
+    },
+    {
+      "type": "change",
+      "value": "Spiderman",
+      "selectors": [["#friendName"]],
+      "target": "main"
+    },
+    {
+      "type": "change",
+      "value": "sm@avengers.com",
+      "selectors": [["#friendEmail"]],
+      "target": "main"
+    },
+    {
+      "type": "click",
+      "target": "main",
+      "selectors": [["#addFriendBtn"], ["text/Add Friend"]],
+      "offsetY": 28.29998779296875,
+      "offsetX": 86.08749389648438
+    },
+    {
+      "type": "waitForElement",
+      "selectors": ["text/Spiderman", "text/sm@avengers.com"]
+    }
+  ]
+}

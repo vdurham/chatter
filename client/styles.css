@@ -1,0 +1,143 @@
+body {
+  background: linear-gradient(
+    to bottom,
+    /* Direction of the gradient */ rgba(173, 216, 230, 0.699),
+    /* Light blue */ #1a73e8b9 /* Button color */
+  );
+  min-height: 100vh; /* Ensures it covers at least the full viewport height */
+  margin: 0; /* Removes default margin */
+  font-size: 16px; /* Keep as is */
+  font-family: 'Inter', 'Arial', sans-serif; /* Keep as is */
+}
+
+.button {
+  background-color: #1a73e8; /* Updated to a more vibrant blue */
+  border: none;
+  color: white;
+  padding: 0.7rem 1.3rem; /* Slightly increased padding for a more touch-friendly size */
+  text-align: center;
+  font-size: 1.1rem; /* Increased font size for readability */
+  cursor: pointer;
+  border-radius: 30px; /* More rounded corners */
+  font-weight: 500; /* Slightly lighter font weight */
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease; /* Added transform for hover effect */
+}
+
+.button:hover {
+  background-color: #1669c1; /* Darkened hover color for a more interactive feel */
+  transform: translateY(-2px); /* Added lift effect on hover */
+}
+
+.button:disabled {
+  background-color: #fff; /* Softer disabled color */
+  cursor: not-allowed;
+  color: #1a73e8;
+}
+
+.text-box {
+  color: #1a73e8;
+  font-size: 0.75rem;
+  width: 12rem;
+  height: 1.4rem;
+  padding: 7px 15px;
+  border-radius: 24px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Added subtle shadow for depth */
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.text-box::placeholder {
+  color: #1a73e88a;
+}
+
+.text-box-label {
+  color: #1a73e8;
+  text-align: left;
+  width: 12rem;
+  height: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 1.5rem 2rem;
+  height: 5vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.footer {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  padding: 0.9rem 0.3rem;
+  margin: 1rem 2rem;
+  min-height: 12vh;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.form-col {
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  align-items: center;
+  gap: 10px;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 0.6rem;
+}
+
+.blue-box {
+  background-color: #ffffff; /* Changed to white for clarity */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Increased gap for better spacing */
+  padding: 2rem; /* Increased padding for a more spacious feel */
+  border-radius: 24px; /* More rounded corners for a modern look */
+  margin: 1.5rem 2rem; /* Adjusted margin for better alignment */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Added subtle shadow for depth */
+  border: 1px solid rgba(0, 0, 0, 0.05); /* Optional: light border for definition */
+}
+
+.content {
+  overflow-y: scroll;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 9vh;
+  bottom: 22vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}

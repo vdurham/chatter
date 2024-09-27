@@ -1,0 +1,124 @@
+{
+  "title": "MaintainFriendsList.ClearFriends",
+  "steps": [
+    {
+      "type": "setViewport",
+      "width": 505,
+      "height": 824,
+      "deviceScaleFactor": 1,
+      "isMobile": false,
+      "hasTouch": false,
+      "isLandscape": false
+    },
+    {
+      "type": "waitForExpression",
+      "expression": "(() => { localStorage.setItem('friends', JSON.stringify([])); return true;})()"
+    },
+    {
+      "type": "navigate",
+      "url": "https://chatter-chat-app.onrender.com/pages/friends.html",
+      "assertedEvents": [
+        {
+          "type": "navigation",
+          "url": "https://chatter-chat-app.onrender.com/pages/friends.html",
+          "title": "Chatter Friend List"
+        }
+      ]
+    },
+    {
+      "type": "click",
+      "target": "main",
+      "selectors": [["#friendName"]],
+      "offsetY": 15.0999755859375,
+      "offsetX": 111.39999771118164
+    },
+    {
+      "type": "change",
+      "value": "test1",
+      "selectors": [["#friendName"]],
+      "target": "main"
+    },
+    {
+      "type": "change",
+      "value": "test1@",
+      "selectors": [["#friendEmail"]],
+      "target": "main"
+    },
+    {
+      "type": "change",
+      "value": "test1@gmail.com",
+      "selectors": [["#friendEmail"]],
+      "target": "main"
+    },
+    {
+      "type": "click",
+      "target": "main",
+      "selectors": [["#addFriendBtn"], ["text/Add Friend"]],
+      "offsetY": 21.89996337890625,
+      "offsetX": 38.88749694824219
+    },
+    {
+      "type": "click",
+      "target": "main",
+      "selectors": [["#friendName"]],
+      "offsetY": 12.0999755859375,
+      "offsetX": 87.39999771118164
+    },
+    {
+      "type": "change",
+      "value": "test2",
+      "selectors": [["#friendName"]],
+      "target": "main"
+    },
+    {
+      "type": "change",
+      "value": "test2@gmail.com",
+      "selectors": [["#friendEmail"]],
+      "target": "main"
+    },
+    {
+      "type": "click",
+      "target": "main",
+      "selectors": [["#addFriendBtn"], ["text/Add Friend"]],
+      "offsetY": 19.89996337890625,
+      "offsetX": 51.88749694824219
+    },
+    {
+      "type": "click",
+      "target": "main",
+      "selectors": [["#friendName"]],
+      "offsetY": 12.0999755859375,
+      "offsetX": 97.39999771118164
+    },
+    {
+      "type": "change",
+      "value": "test3",
+      "selectors": [["#friendName"]],
+      "target": "main"
+    },
+    {
+      "type": "change",
+      "value": "test3@gmail.com",
+      "selectors": [["#friendEmail"]],
+      "target": "main"
+    },
+    {
+      "type": "click",
+      "target": "main",
+      "selectors": [["#addFriendBtn"], ["text/Add Friend"]],
+      "offsetY": 27.89996337890625,
+      "offsetX": 71.88749694824219
+    },
+    {
+      "type": "click",
+      "target": "main",
+      "selectors": [["#clearBtn"], ["text/Clear Friends"]],
+      "offsetY": 30.300000190734863,
+      "offsetX": 56.975006103515625
+    },
+    {
+      "type": "waitForExpression",
+      "expression": "(() => { localStorage.setItem('friends', JSON.stringify([])); const friends = JSON.parse(localStorage.getItem('friends')); return friends.length === 0; })()"
+    }
+  ]
+}

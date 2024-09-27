@@ -1,0 +1,44 @@
+// REST tests for navigation (static pages)
+// These simply return an HTML document
+
+# Home page, directly accessing the index.html file
+GET http://localhost:8080/pages/index.html
+###
+GET http://localhost:8080/home
+###
+GET http://localhost:8080/
+###
+GET http://localhost:8080/pug/
+###
+GET http://localhost:8080/pug/home
+###
+
+
+# Authentication page
+GET http://localhost:8080/pages/auth.html
+###
+GET http://localhost:8080/auth
+###
+GET http://localhost:8080/pug/auth
+###
+
+# Chat page
+GET http://localhost:8080/pages/chat.html
+###
+GET http://localhost:8080/chat
+###
+GET http://localhost:8080/pug/chat
+###
+
+# Friends page
+GET http://localhost:8080/pages/friends.html
+###
+GET http://localhost:8080/friends
+###
+GET http://localhost:8080/pug/friends
+###
+
+# About page
+GET http://localhost:8080/about
+###
+GET http://localhost:8080/pug/about

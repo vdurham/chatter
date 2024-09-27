@@ -1,0 +1,36 @@
+{
+  "title": "MaintainFriendList.DeletesAFriend",
+  "steps": [
+    {
+      "type": "setViewport",
+      "width": 915,
+      "height": 825,
+      "deviceScaleFactor": 1,
+      "isMobile": false,
+      "hasTouch": false,
+      "isLandscape": false
+    },
+    {
+      "type": "navigate",
+      "url": "https://chatter-chat-app.onrender.com/pages/friends.html",
+      "assertedEvents": [
+        {
+          "type": "navigation",
+          "url": "https://chatter-chat-app.onrender.com/pages/friends.html",
+          "title": "Chatter Friend List"
+        }
+      ]
+    },
+    {
+      "type": "click",
+      "target": "main",
+      "selectors": [["button"], ["text/✖"]],
+      "offsetY": 10.099998474121094,
+      "offsetX": 6.20001220703125
+    },
+    {
+      "type": "waitForExpression",
+      "expression": "!(new RegExp(\"Spiderman\").test(document.body.textContent))"
+    }
+  ]
+}

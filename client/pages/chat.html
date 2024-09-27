@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="FirstName LastName (andrewid)" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="18351 class project" />
+    <link href="../styles.css" rel="stylesheet" type="text/css" />
+    <script src="../chat.ts" type="module" defer=""></script>
+    <title>Chatter Chat Room</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+    />
+    <style>
+      textarea {
+        width: 70%;
+        height: 95%;
+        padding: 5px;
+        box-sizing: border-box;
+        border-radius: 0.8rem;
+        background-color: #ffffff;
+        resize: none;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Added subtle shadow for depth */
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        margin: 0 0.7rem 0 0;
+        font-family: 'Inter', 'Arial', sans-serif;
+        color: #1a73e8;
+        font-weight: 400;
+        font-size: 16px;
+        outline: none;
+      }
+
+      textarea::placeholder {
+        color: #1a73e88a;
+      }
+
+      .chat-container {
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        border-radius: 10px;
+        gap: 10px;
+        padding: 10px;
+        margin: 4px;
+        min-width: 80%;
+      }
+
+      .chat-header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        align-content: flex-start;
+        justify-content: flex-end;
+        gap: 5px;
+      }
+
+      .chat-sender {
+        background-color: #1a73e8;
+        color: white;
+        border-radius: 1rem;
+        padding: 6px 11px;
+        font-size: 1rem;
+      }
+
+      .chat-timestamp {
+        color: #1a73e8;
+        border-radius: 1rem;
+        padding: 1px 5px;
+        font-size: 0.7rem;
+      }
+
+      .chat-message {
+        flex: 1;
+        overflow-wrap: break-word;
+        background-color: #1a73e8;
+        color: white;
+        border-radius: 1rem;
+        padding: 6px 11px;
+        font-size: 1rem;
+        font-family: 'Inter', 'Arial', sans-serif;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="header_container">
+      <div class="header">
+        <a href="/">
+          <input class="button" type="button" id="homeBtn" value="Home" />
+        </a>
+        <span
+          style="
+            color: #1a73e8;
+            font-family: 'Lobster', cursive;
+            font-size: 2.5rem;
+            font-weight: bold;
+          "
+          >Chatter Chat</span
+        >
+        <div>
+          <input class="button" type="button" id="leaveBtn" value="Leave" />
+          <input class="button" type="button" id="logoutBtn" value="Logout" />
+        </div>
+      </div>
+    </div>
+
+    <div id="existingChatMessages" class="content">
+      <div class="form-row" style="justify-content: flex-start">
+        <!-- <span class="chat-container">
+        <span class="chat-header">
+          <span class="chat-sender">Chatter Bot</span>
+          <span class="chat-timestamp">Some time ago</span>
+        </span>
+        <span class="chat-message">A warm welcome from Chatter!</span> -->
+      </div>
+    </div>
+
+    <div class="footer">
+      <textarea
+        id="chatMessage"
+        placeholder="Add your chat message here!"
+      ></textarea>
+      <input class="button" type="button" id="postBtn" value="Post" />
+    </div>
+  </body>
+</html>

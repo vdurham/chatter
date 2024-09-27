@@ -1,0 +1,115 @@
+// create a user 
+POST http://localhost:8080/auth/users
+Content-Type: application/json
+
+{
+    "credentials": {
+        "username": "jane@me.com",
+        "password": "bl@hbl@h1"
+    },
+    "extra": "Jane Doe"
+}
+
+###
+
+// login for jane with correct password
+POST http://localhost:8080/auth/tokens/jane@me.com
+Content-Type: application/json
+
+{
+    "password": "bl@hbl@h1"
+}
+
+###
+
+// weak password
+POST http://localhost:8080/auth/users
+Content-Type: application/json
+
+{
+    "credentials": {
+        "username": "weakpassword@example.com",
+        "password": "1234"  
+    },
+    "extra": "John Doe"
+}
+
+###
+
+// missing username
+POST http://localhost:8080/auth/users
+Content-Type: application/json
+
+{
+    "credentials": {
+        "password": "StrongPassword123!"   
+    },
+    "extra": "John Doe"
+}
+
+###
+
+// missing password
+POST http://localhost:8080/auth/users
+Content-Type: application/json
+
+{
+    "credentials": {
+        "username": "missingpassword@example.com"
+    },
+    "extra": "John Doe"
+}
+
+###
+
+// incorrect password
+POST http://localhost:8080/auth/tokens/jane@me.com
+Content-Type: application/json
+
+{
+    "password": "incorrectpassword"
+}
+
+###
+
+// login missing password
+POST http://localhost:8080/auth/tokens/jane@me.com
+Content-Type: application/json
+
+{
+    
+}
+
+###
+
+// nonexistent user
+POST http://localhost:8080/auth/tokens/nonexistentuser@example.com
+Content-Type: application/json
+
+{
+    "password": "password"
+}
+
+###
+
+// login missing username
+POST http://localhost:8080/auth/tokens/
+Content-Type: application/json
+
+{
+    "password": "password"
+}
+
+###
+
+// register existing username
+POST http://localhost:8080/auth/users
+Content-Type: application/json
+
+{
+    "credentials": {
+        "username": "jane@me.com",
+        "password": "StrongPassword123!"   
+    },
+    "extra": "Another User"
+}

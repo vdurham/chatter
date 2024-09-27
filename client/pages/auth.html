@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="FirstName LastName (andrewid)" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../styles.css" rel="stylesheet" type="text/css" />
+    <script src="../auth.ts" type="module" defer=""></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Chatter Authentication</title>
+    <style>
+      .input-box {
+        color: #1a73e8;
+        font-size: 0.75rem;
+        width: 12rem;
+        height: 1.4rem;
+        padding: 7px 15px;
+        border-radius: 24px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Added subtle shadow for depth */
+        border: 1px solid rgba(0, 0, 0, 0.05);
+      }
+
+      .input-box::placeholder {
+        color: #1a73e88a;
+      }
+
+      .input-box input {
+        border: none;
+        background-color: transparent;
+        outline: none;
+        color: #1a73e88a;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="header">
+      <input class="button" type="button" id="homeBtn" value="Home" />
+      <input class="button" type="button" id="logoutBtn" value="Logout" />
+    </div>
+    <form
+      id="authForm"
+      class="blue-box"
+      style="border: none; margin: 8rem 2rem"
+    >
+      <label class="text-box-label" for="myName">Name:</label>
+      <div class="input-box">
+        <input
+          type="text"
+          name="myName"
+          placeholder="Required for registration"
+        />
+      </div>
+
+      <label class="text-box-label" for="myEmail">Email:</label>
+      <div class="input-box">
+        <input type="email" name="myEmail" placeholder="me@somedomain.com" />
+      </div>
+      <label class="text-box-label" for="myPassword">Password:</label>
+      <div
+        class="input-box"
+        style="
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+        "
+      >
+        <input
+          id="myPassword"
+          style="width: 10rem"
+          type="password"
+          name="myPassword"
+          placeholder="A strong password"
+        />
+        <span id="passwordToggle">
+          <i
+            class="fa-regular fa-eye fa-2x"
+            title="Show Password"
+            id="openEye"
+          ></i>
+        </span>
+      </div>
+
+      <span>
+        <input class="button" type="submit" id="registerBtn" value="Register" />
+        <input class="button" type="submit" id="loginBtn" value="Login" />
+      </span>
+    </form>
+  </body>
+</html>
