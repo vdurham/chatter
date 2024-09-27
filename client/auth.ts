@@ -21,7 +21,7 @@ async function login(email: string, password: string) {
         res.data.payload.user.credentials.username
       ); // Save current user to local storage
       alert('Login successful! You will be redirected to the chat page.');
-      window.location.href = '../../pages/chat.html';
+      window.location.href = '../../chat.html';
     } else {
       alert(res.data.message); // Display error message to the user
     }
