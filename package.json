@@ -1,10 +1,6 @@
 {
-  "name": "express-ts-app",
-  "author": "Hakan Erdogmus",
-  "license": "None",
   "repository": {
-    "type": "git",
-    "url": "git+https://username:pat@github.com/cmu-fsd/repoName.git"
+    "type": "git"
   },
   "scripts": {
     "clean:dist": "rm -rf ./.dist",
@@ -110,11 +106,7 @@
         "client/pages/index.html",
         "client/pages/friends.html",
         "client/pages/auth.html",
-        "client/pages/chat.html",
-        "client/views/index.pug",
-        "client/views/auth.pug",
-        "client/views/friends.pug",
-        "client/views/chat.pug"
+        "client/pages/chat.html"
       ],
       "distDir": ".dist/client",
       "context": "browser"
